@@ -2,7 +2,7 @@
 
 ***
 
-This code is the basis of our work, aiming to train and apply the group-contribution based GNN in the prediction of Vapor-liquid equilibrium data under ambient pressure for binary mixtures with limited descriptors. This is an **alpha version** of the codes used to generate the results published in:
+This code is the basis of our work in Interpretable vapor-liquid equilibrium prediction model based on graph neural networks and group-contribution concept, aiming to train and apply the group-contribution based GNN in the prediction of vapor-liquid equilibrium data under ambient pressure for binary mixtures with limited descriptors. This is an **alpha version** of the codes used to generate the results published in:
 
 [Vapor-liquid phase equilibria behavior prediction of binary mixtures using machine learning]
 
