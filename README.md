@@ -14,14 +14,19 @@ DOI:
 
 The code is written in python and can be run from command prompt. This requires the following packages and modules:
 
-* Python 3.8 or higher
-* torch==2.0.1
-* pandas==1.4.3
-* numpy==1.24.3
-* scikit_sklearn==1.3.0
-* matplotlib==3.7.2
-* tensorboardX==2.6.2.2
+* Python 3.10.16 or higher
+* torch==2.7.0
+* pandas==2.2.3
+* numpy==2.0.1
+* scikit-learn==1.6.1
+* dgl==2.0.0
+* matplotlib==3.10.1
+* prettytable==3.16.0
 * openpyxl==3.1.2
+* rdkit==2014.9.6
+* tqdm==4.67.1
+* umap==0.1.1
+* umap_learn==0.5.7
 
 ## Data
 
