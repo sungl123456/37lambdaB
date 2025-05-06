@@ -36,6 +36,7 @@ The data sets that used in the dataset folder are available as .csv documents. T
 * `VLE_azeotrope.csv` All of the zeotropic VLE data used in the training, the size of data collected was doubled by swapping and rejoining the descriptors of component A and component B.
 * `VLE.csv` All of the VLE data used in this work.
 * `Tc_JCIM_normalized.csv` Critical temperature values (Tc) used in the Tc prediction model.
+* `Tb_JCIM_normalized.csv` Bubble-point temperature values (Tb) used in the Tc prediction model.
 * `mixtures.xlsx` All of the mixtures collected.
 
 ## Cross-validation
@@ -49,12 +50,12 @@ python cross_validation.py
 The data mentioned above will be disrupted as mixture-based unit for training and evalidation.
 
 ## Generate models for prediction
+
+## Generate models for prediction
 To generate models for the whole dataset with the descriptors contribute the most, do:
 ```commandline
 
-cd all
 
-python train_all.py
 
 ```
 
