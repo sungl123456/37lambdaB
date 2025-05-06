@@ -6,8 +6,6 @@ This code is the basis of our work aiming to train and apply the group-contribut
 
 [Interpretable vapor-liquid equilibrium prediction model based on graph neural networks and group-contribution concept]
 
-
-
 DOI:
 
 ## Prerequisites and dependencies
