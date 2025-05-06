@@ -21,19 +21,19 @@ The code is written in python and can be run from command prompt. This requires 
 * matplotlib==3.10.1
 * prettytable==3.16.0
 * openpyxl==3.1.2
-* rdkit==2014.9.6
+* rdkit==2024.9.6
 * tqdm==4.67.1
 * umap==0.1.1
 * umap_learn==0.5.7
 
 ## Data
 
-The data that used in the original work is available as three excel documents (.xlsx). Three files are included:
+The data sets that used in the dataset folder are available as .csv documents. Three files are included:
 
-* `dataset.xlsx` All of the data used in the training, the size of data collected was doubled by swapping and rejoining the descriptors of component A and component B.
-* `VLE_input.xlsx` The screened descriptors of the substances with the liquid fractions and the pressure (mainly ambient pressure) in vapor-liquid equilibrium.
-* `VLE_output_T.xlsx` The bubble point temperature in vapor-liquid equilibrium.
-* `VLE_output_Y.xlsx` The vapor fraction in vapor-liquid equilibrium.
+* `VLE_zeotrope.csv` All of the zeotropic VLE data used in the training, the size of data collected was doubled by swapping and rejoining the descriptors of component A and component B.
+* `VLE_azeotrope.csv` All of the zeotropic VLE data used in the training, the size of data collected was doubled by swapping and rejoining the descriptors of component A and component B.
+* `VLE.csv` All of the VLE data used in this work.
+* `Tc_JCIM_normalized.csv` Critical temperature values (Tc) used in the Tc prediction model.
 * `mixtures.xlsx` All of the mixtures collected.
 
 ## Cross-validation
