@@ -349,7 +349,7 @@ for j in range(len(dataset_list)):
                                                                             fetched_data.test_x1,
                                                                             fetched_data.test_y1,
                                                                             fetched_data.test_smiles_list_comp1,
-                                                                            fetched_data.test_smiles_list_comp2,n_param,frag =True)
+                                                                            fetched_data.test_smiles_list_comp2,n_param,flag =True)
         _, epoch_raw_metrics_Y = evaluate_frag_VLE(model_Y,scaling_y1,fetched_data.all_iter, 
                                                                             fetched_data.all_batched_origin_graph_list_comp1, fetched_data.all_batched_origin_graph_list_comp2,
                                                                             fetched_data.all_batched_frag_graph_list_comp1, fetched_data.all_batched_frag_graph_list_comp2,
