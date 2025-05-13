@@ -38,8 +38,8 @@ net_params['num_bond_type'] = 12
 net_params['hidden_dim'] = 16
 net_params['num_heads'] = 1
 net_params['dropout'] = 0
-net_params['depth'] = 1
-net_params['layers'] = 1
+net_params['depth'] = 2
+net_params['layers'] = 2
 net_params['residual'] = False
 net_params['batch_norm'] = False
 net_params['layer_norm'] = False
@@ -47,7 +47,7 @@ net_params['device'] = 'cpu'
 splitting_seed = [3777,2931]
 init_seed = [169,361]
 model_num = [9,6]
-dataset_list = ['VLE_azeotrope_with_water','VLE_zeotrope_with_water']
+dataset_list = ['VLE_zzeotrope_with_water','VLE_azeotrope_with_water']
 path = ['VLE_zeotrope_with_water','VLE_azeotrope_with_water']
 path_l = ['Tb_JCIM_normalized/all','Tc_JCIM_normalized/all']
 name_l = ['Ensemble_0_Tb_JCIM_normalized_AGCNet','Ensemble_0_Tc_JCIM_normalized_AGCNet']
@@ -188,7 +188,7 @@ for j in range(len(dataset_list)):
                                 'attention_comp1':np.array([v.tolist() for v in attention_comp1_list_T],dtype = list),
                                 'attention_comp2':np.array([v.tolist() for v in attention_comp2_list_T],dtype = list)})
     
-    save_file_path_T = os.path.join('./library/' + path[j], '{}_{}'.format( dataset_list[j], time.strftime('%Y-%m-%d-%H-%M')) + '_T.csv')
+    save_file_path_T = os.path.join(path[j], '{}_{}'.format( dataset_list[j], time.strftime('%Y-%m-%d-%H-%M')) + '_T.csv')
     df_value_T.to_csv(save_file_path_T, index=False)
 
     df_value_Y= pd.DataFrame({'SMILES_comp1': smiles_list_comp1_Y[0], 'SMILES_comp2': smiles_list_comp2_Y[0],
@@ -196,5 +196,5 @@ for j in range(len(dataset_list)):
                             'Predict': test_predict_Y.numpy().flatten().tolist(),                                
                             'attention_comp1':np.array([v.tolist() for v in attention_comp1_list_Y],dtype = list),
                             'attention_comp2':np.array([v.tolist() for v in attention_comp2_list_Y],dtype = list)})
-    save_file_path_Y = os.path.join('./library/' + path[j], '{}_{}'.format(dataset_list[j], time.strftime('%Y-%m-%d-%H-%M')) + '_Y.csv')
+    save_file_path_Y = os.path.join(path[j], '{}_{}'.format(dataset_list[j], time.strftime('%Y-%m-%d-%H-%M')) + '_Y.csv')
     df_value_Y.to_csv(save_file_path_Y, index=False)
