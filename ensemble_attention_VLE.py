@@ -196,5 +196,5 @@ for j in range(len(dataset_list)):
                             'Predict': test_predict_Y.numpy().flatten().tolist(),                                
                             'attention_comp1':np.array([v.tolist() for v in attention_comp1_list_Y],dtype = list),
                             'attention_comp2':np.array([v.tolist() for v in attention_comp2_list_Y],dtype = list)})
-    save_file_path_Y = os.path.join('./library/' + path[j], '{}_{}'.format(dataset_list[j], time.strftime('%Y-%m-%d-%H-%M')) + '_T.csv')
+    save_file_path_Y = os.path.join('./library/' + path[j], '{}_{}'.format(dataset_list[j], time.strftime('%Y-%m-%d-%H-%M')) + '_Y.csv')
     df_value_Y.to_csv(save_file_path_Y, index=False)
