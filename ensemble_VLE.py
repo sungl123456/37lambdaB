@@ -50,7 +50,7 @@ net_params['batch_norm'] = False
 net_params['layer_norm'] = False
 net_params['device'] = 'cpu'
 splitting_seed = [2931,3777]
-dataset_list = ['VLE_zeotrope_with_water','VLE_azeotrope_with_water']
+dataset_list = ['VLE_zeotrope','VLE_azeotrope']
 path_l = ['Tb_JCIM_normalized/all','Tc_JCIM_normalized/all']
 name_l = ['Ensemble_0_Tb_JCIM_normalized_AGCNet','Ensemble_0_Tc_JCIM_normalized_AGCNet']
 
@@ -396,8 +396,8 @@ for j in range(len(dataset_list)):
             df_test_T['Predict_' + str(i)] = predict_test_T.numpy().flatten().tolist()
             df_test_Y['Predict_' + str(i)] = predict_test_Y.numpy().flatten().tolist()
         
-    save_file_path_T = os.path.join('./library/' + path_T, '{}_{}_{}_{}'.format(name_T, 'test_value', init_seed_list[i], time.strftime('%Y-%m-%d-%H-%M')) + '.csv')
-    save_file_path_Y = os.path.join('./library/' + path_Y, '{}_{}_{}_{}'.format(name_Y, 'test_value', init_seed_list[i], time.strftime('%Y-%m-%d-%H-%M')) + '.csv')
+    save_file_path_T = os.path.join(path_T, '{}_{}_{}_{}'.format(name_T, 'test_value', init_seed_list[i], time.strftime('%Y-%m-%d-%H-%M')) + '.csv')
+    save_file_path_Y = os.path.join(path_Y, '{}_{}_{}_{}'.format(name_Y, 'test_value', init_seed_list[i], time.strftime('%Y-%m-%d-%H-%M')) + '.csv')
     df_test_T.to_csv(save_file_path_T,index=False)
     df_test_Y.to_csv(save_file_path_Y,index=False)
 
