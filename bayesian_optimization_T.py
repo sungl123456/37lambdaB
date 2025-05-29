@@ -267,7 +267,7 @@ for i in range(len(dataset_list)):
     fetched_data = Azeotrope_PreFetch(train_loader, val_loader, test_loader, raw_loader, frag=4)
 
     hpbounds = {'hidden_dim':(16,256.99),'depth':(1,5.99),'layers':(1,5.99),'decay':(0,6.99),'dropout':(0,0.5),'init_lr':(2,5),'lam_T':(0.01,0.99),'lr_reduce_factor':(0,10.99)}
-    mutating_optimizer = BayesianOptimization(f = func_to_be_opt_MO, pbounds = hpbounds, verbose = 1, random_state = 250)
+    mutating_optimizer = BayesianOptimization(f = func_to_be_opt_MO, pbounds = hpbounds, random_state = 250)
     mutating_optimizer.set_gp_params(alpha=1e-4, n_restarts_optimizer=1)
     utility = UtilityFunction(kind="ei", xi=0.01)
     mutating_optimizer.maximize(init_points = 5, n_iter = 50, acquisition_function = utility)
