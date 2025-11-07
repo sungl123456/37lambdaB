@@ -32,50 +32,36 @@ The code is written in python and can be run from command prompt. This requires 
 
 The data sets that used in the dataset folder are available as .csv documents. Three files are included:
 
-* `VLE_zeotrope.csv` All of the zeotropic VLE data used in the training, the size of data collected was doubled by swapping and rejoining the descriptors of component A and component B.
-* `VLE_azeotrope.csv` All of the zeotropic VLE data used in the training, the size of data collected was doubled by swapping and rejoining the descriptors of component A and component B.
-* `VLE.csv` All of the VLE data used in this work.
+* `VLE_total.csv` All of the VLE data used in this work.
 * `Tc_JCIM_normalized.csv` Critical temperature values (Tc) used in the Tc prediction model.
 * `Tb_JCIM_normalized.csv` Bubble-point temperature values (Tb) used in the Tc prediction model.
-* `mixtures.xlsx` All of the mixtures collected.
+* `azeotrope_classification.csv` All of the mixtures collected with their azetrope/non-azeotrope tags.
 
-## Cross-validation
-To validate the feasibility of the method as well as to evaluate the training, do:
+## random seed 
+To find the suitable random seed at first, do:
 ```commandline
 
-python cross_validation.py
+python Seed_azeotropic_clf.py
+python Seed_VLE_total.py
 
 ```
+## Generate models for prediction
+To train the corresponding model, do:
+```commandline
 
+python ensemble_azeotropic_clf.py
+python ensemble_VLE_total.py
+
+```
 The data mentioned above will be disrupted as mixture-based unit for training and evalidation.
 
-## Generate models for prediction
 
-## Generate models for prediction
-To generate models for the whole dataset with the descriptors contribute the most, do:
+## Calculating the attention value
+To generate attention value and the prediction results for the azeotropic classification and VLE prediction, do:
 ```commandline
 
-
+python ensemble_attention_azeotropic_clf.py
+python ensemble_attention_VLE_total.py
 
 ```
 
-## Prediction
-To acquire the T-xy data for target mixture, do:
-
-```commandline
-
-python predict.py
-
-```
-The name of the components of the target mixture is required to input sequentially, for example,
-
-water
-methanol
-
-The name of the substance is also listed in `all//Tc_Tb.csv`.
-
-The prediction results by ANN and RF will be written in `water_methanol_VLE_predict.csv`. 
-
-We suggest the users will further regressed the prediction results with traditional thermodynamic models such as NRTL functions, for a practical use. 
-
-We also suggest the users will expand the data set in the `all` folder for a more accurate prediction. Only the critical temperature and boiling point and the T-xy data are required.
