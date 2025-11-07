@@ -56,7 +56,7 @@ python ensemble_VLE_total.py
 The data mentioned above will be disrupted as mixture-based unit for training and evalidation.
 
 
-## Calculating the attention value
+## Calculate the attention value
 To generate attention value and the prediction results for the azeotropic classification and VLE prediction, do:
 ```commandline
 
