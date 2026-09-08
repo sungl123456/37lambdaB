@@ -6,7 +6,9 @@ This code is the basis of our work aiming to train and apply the group-contribut
 
 [Interpretable vapor-liquid equilibrium prediction model based on graph neural networks and group-contribution concept]
 
-DOI:
+DOI:[10.1016/j.ces.2026.125035](https://doi.org/10.1016/j.ces.2026.125035)
+
+Chemical Engineering Science 2027 Vol. 338 Pages 125035
 
 The code is preliminarily built for the CPU training. In the future, the code will be update to the GPU version in https://github.com/sungl123456/37lambdaB_GPU
 
